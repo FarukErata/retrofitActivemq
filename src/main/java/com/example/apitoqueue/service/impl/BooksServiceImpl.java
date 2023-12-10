@@ -38,13 +38,12 @@ public class BooksServiceImpl implements BooksService {
 
             if(response.isSuccessful() && response.body()!=null){
                 booksResponse= response.body();
-                System.out.print("ok");
+
             }
-//            booksResponse=response.body();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        System.out.print(" response "+booksResponse);
+
         return booksResponse;//jmsTemplate.convertAndSend("getString-queue", booksResponse);
     }
 }
